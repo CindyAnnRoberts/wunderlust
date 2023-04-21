@@ -220,27 +220,102 @@ nav li{
     height: 340px;
     object-fit: cover;
     object-position: 65% 50%;
+    margin-bottom: 16px;
 }
 
 
-/****************** TESTIMONIAL SECTION ******************/
-
-/****************** CONTACT SECTION ******************/
-
-
-
-
+/****************** #plan section ******************/
+#plan h3{
+font-size: 40px;
+padding: 30px 0 19px 43px;
+}
 
 #plan{
+    padding-bottom:25px;
     background-color: var(--yellow);
-
 }
 
+#plan section{
+    border: 3px solid #fff;
+    height: 302px;
+    width: 358px;
+    background-color: var(--teal);
+    margin: 0 auto 8px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+#plan h4{
+    margin: 22px 0 23px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+#plan img{
+    width: 179.9px;
+}
+/* #plan section:nth-child(1){
+    margin-right: 20px;
+} */
+/****************** #testimonials section ******************/
+#testimonials section{
+   text-align: center;
+}
+#testimonials h3{
+    font-size: 40px;
+    margin: 53px 0 18px 43px;
+    
+}
+#testimonials h4{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+   padding: 0 64px;
+    line-height: 37px;
+}
+#testimonials p{
+    font-size: 20px;
+}
+q{
+    font-size: 20px;
+    font-style: italic;
+    line-height: 24px;
+    display: inline-block;
+    max-width: 21ch;
+    quotes: auto;
+    margin-bottom: 11px;
+   
+}
+q:before {
+    content: open-quote;
+  }
+   
+q:after {
+content: close-quote;
+}
+
+#testimonials section img{
+   margin-bottom: 11px;
+   text-align: center;
+}
+
+
+
+
+
+
+/****************** #about section ******************/
 #about div{
     background-color: var(--blue);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+
+
 
 /****************** FOOTER ******************/
 footer{
