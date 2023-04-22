@@ -284,7 +284,7 @@ q{
     font-style: italic;
     line-height: 24px;
     display: inline-block;
-    max-width: 21ch;
+    max-width: 22ch;
     quotes: auto;
     margin-bottom: 11px;
     color: var(--darkGray);
@@ -350,6 +350,8 @@ content: close-quote;
     display: block;
     text-transform: uppercase;
     font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
 }
 #fName, #lName, #email, #phone, #travelTime, #destination{
     margin-bottom: 26px;
@@ -364,14 +366,44 @@ content: close-quote;
 legend{
     font-size: 20px;
     text-transform: uppercase;
+    margin-bottom: 11px;
+    color: var(--darkGray);
+    font-weight: 600;
 }
-[type="submit"]{
+fieldset {
+    margin-bottom: 41px;
+}
+
+#nums label{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+input[type="radio"] {
+    height: 75px;
+    width: 75px;
+    accent-color: var(--purple);
+    margin-right: 15px;
+}
+
+
+select{
+color: var(--darkGray);
+font-size: 20px;
+}
+
+input[type="submit"]{
     padding: 26px 136px;
     background-color: var(--purple);
     border: none;
     color: #fff;
     text-transform: uppercase;
+    margin-bottom: 21px;
+    font-size: 20px;
 }
+
 ::-webkit-input-placeholder { /* Edge */
     color: var(--darkGray);
     font-size: 20px;
@@ -386,13 +418,25 @@ legend{
     color: var(--darkGray);
     font-size: 20px;
   }
+  #destination, #travelTime{
+   /* border: 2px solid lime; */
+   width: 93%;
+  }
+  /* select{
+    appearance: none;
+    outline: none;
+  } */
+
+ 
+
+ 
 
 /****************** FOOTER ******************/
 footer{
     background-color: var(--lightGray);
     text-align: center;
-    padding-bottom: 30px;
-    margin-bottom: 20px;
+    padding-top: 19px;
+    padding-bottom: 21px;
    
 }
 footer a{
@@ -400,10 +444,12 @@ footer a{
     text-decoration: none;
     margin-bottom: 10px;
     color: #000;
+    font-family: 'Montserrat', sans-serif;
 }
 footer p{
-    padding: 19px 0 29px;
+    padding: 0 0 29px;
+    font-family: 'Montserrat', sans-serif;
 }
-footer:last-child{
-    margin-bottom: 0px;
+#privacy{
+    margin-bottom: 20px;
 }
