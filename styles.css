@@ -214,12 +214,15 @@ nav li{
     color: var(--darkGray);
 }
 #intro img{
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
     vertical-align: bottom;
     object-fit: cover;
-    object-position: 65% 50%;
     margin-bottom: 16px;
+}
+picture img{
+   width: 100%;
+   height: 341px;
+   object-position: 65% 50%;
 }
 
 /****************** #plan section ******************/
@@ -258,12 +261,10 @@ padding: 30px 0 19px 43px;
 }
 
 #plan img{
-    width: 61%;
-    height: 61%;
+   width: 180px;
+   height: 180px;
 }
-/* #plan section:nth-child(1){
-    margin-right: 20px;
-} */
+
 
 /****************** #testimonials section ******************/
 #testimonials section{
@@ -409,7 +410,6 @@ select{
 color: var(--darkGray);
 font-size: 20px;
 }
-
 
 input[type="submit"]{
     padding: 10px;
@@ -561,7 +561,7 @@ footer p{
     #img-grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 1fr 237px;
         gap: 16px;
     }
     #img-grid img:first-child{
@@ -572,9 +572,12 @@ footer p{
         grid-column: 1/2;
         grid-row: 1/2;
     }
-   picture{
+    picture{
         grid-column: 1/-1;
         grid-row: 2/-1;
+    }
+    picture img{
+        height: 237px;
     }
     /****************** #plan section ******************/
     #plan{
@@ -588,11 +591,11 @@ footer p{
         font-size: 22px;
     }
     #plan div{
-       width: 622px;
-       height: 525px;
-       display: grid;
+       width: 607px;
        grid-template-columns: repeat(2, 1fr);
        grid-template-rows: repeat(2, 1fr);
+       gap: 16px;
+       margin: 0 auto;
     }
     #plan section{
         width: 295px;
@@ -676,8 +679,9 @@ footer p{
     }
     /********************* HEADER **********************/
     header{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 228px;
+        height: 228px;
+        grid-template-columns: 2fr 1fr;
+        /* grid-template-rows: 228px; */
     }
     #logo{
         grid-column: 1/2;
@@ -687,12 +691,16 @@ footer p{
         grid-column: 1/2;
         grid-row: 1/-1;
         margin-left: 239px;
+        margin-top: 65px;
     }
     header p{
         max-width: 100ch;
         grid-column: 1/2;
         grid-row: 1/-1;
         margin-left: 239px;
+        margin-top: 150px;
+        font-size: 25px;
+       
     }
     /************************ NAV **********************/
     nav{
@@ -724,6 +732,9 @@ footer p{
         grid-column: 2/-1;
         grid-row: 1/-1;
         margin-right: 140px;
+        grid-template-rows: 1fr 300px;
+        padding-top: 119px;
+        margin-bottom: 119px;
     }
     #intro p{
         grid-column: 1/2;
@@ -737,16 +748,19 @@ footer p{
     #about div{
         width: 1000px;
     }
+    picture img{
+        height: 300px;
+    }
+   
     /****************** #plan section ******************/
     #plan{
         padding-bottom: 122px;
+        margin-top: 0;
     }
     #plan div{
-        display: grid;
+        width: 1640px;
         grid-template-columns: repeat(4, 1fr);
-       width: 1640px;
-        height: 336px;
-        gap: 8px;
+        grid-template-rows: 1fr;
     }
     #plan h3{
         margin:0;
@@ -756,8 +770,8 @@ footer p{
         font-size: 30px;
     }
     #plan section{
-        width: 398px;
-        height: 336px;
+       width: 398px;
+       height: 336px;
     }
   
     /****************** #testimonials section ******************/
