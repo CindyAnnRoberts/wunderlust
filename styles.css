@@ -98,25 +98,15 @@ header{
     position: relative;
     padding-bottom: 20px;
 }
+header img{
+    height: 69px;
+    margin: 7.5px 0 25px ;
+    }  
 h1{
     font-size: 50px;
     margin: 25px 0 0 37px;
     color: var(--darkGray);
 }
-.sr-only {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-}
-
-header img{
-height: 69px;
-margin: 7.5px 0 25px ;
-}  
-
 header p{
     font-size: 20px;
     line-height: 30px;
@@ -142,6 +132,14 @@ nav{
     top: 0;
     width: 100%;
 }
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
 nav label{
     background-color: var(--yellow);
     padding: 16px 81px;
@@ -150,6 +148,12 @@ nav label{
     right: 0px;
     top: 27px;
 }
+nav li{
+    padding: 41px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px; 
+}
 nav li a{
     text-decoration: none;
     color:#000;
@@ -157,12 +161,7 @@ nav li a{
     text-transform: uppercase;
     display: none;
 }
-nav li{
-    padding: 41px 0;
-    text-align: center;
-    font-weight: 600;
-    font-size: 15px; 
-}
+
 /****************** TOGGLE MOBILE MENU ******************/
 
 #toggle:checked ~ #myLinks{
@@ -226,15 +225,15 @@ picture img{
 }
 
 /****************** #plan section ******************/
-#plan h3{
+#plan{
+    padding-bottom:25px;
+    background-color: var(--yellow);
+
+}#plan h3{
 font-size: 40px;
 padding: 30px 0 19px 43px;
 }
 
-#plan{
-    padding-bottom:25px;
-    background-color: var(--yellow);
-}
 #plan div{
     display: grid;
     grid-template-columns: 1fr;
@@ -247,7 +246,6 @@ padding: 30px 0 19px 43px;
     height: 302px;
     width: 358px;
     background-color: var(--teal);
-    /* margin: 0 auto 8px; */
     border-radius: 10px;
     text-align: center;
     text-transform: uppercase;
@@ -267,14 +265,17 @@ padding: 30px 0 19px 43px;
 
 
 /****************** #testimonials section ******************/
+#testimonials h3{
+    font-size: 40px;
+    margin: 53px 0 18px 43px; 
+}
 #testimonials section{
    text-align: center;
 }
-#testimonials h3{
-    font-size: 40px;
-    margin: 53px 0 18px 43px;
-    
-}
+#testimonials section img{
+    margin-bottom: 11px;
+    text-align: center;
+ }
 #testimonials h4{
     font-size: 30px;
     text-transform: uppercase;
@@ -295,8 +296,7 @@ q{
     max-width: 22ch;
     quotes: auto;
     margin-bottom: 11px;
-    color: var(--darkGray);
-   
+    color: var(--darkGray); 
 }
 q:before {
     content: open-quote;
@@ -306,16 +306,15 @@ q:after {
 content: close-quote;
 }
 
-#testimonials section img{
-   margin-bottom: 11px;
-   text-align: center;
-}
-
 /****************** #about section ******************/
 #about{
     background-color: var(--blue);
-    padding: 30px 0 25px;
-    
+    padding: 30px 0 25px;  
+}
+#about h3{
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 0 32px 37px;
 }
 #about div{
     display: grid;
@@ -324,11 +323,6 @@ content: close-quote;
     height: 357px;
     width: 304px;
     margin: 0 auto;
-}
-#about h3{
-    font-size: 40px;
-    line-height: 48px;
-    margin: 0 0 32px 37px;
 }
 #about section img{
     height: 100px;
@@ -380,23 +374,21 @@ content: close-quote;
 .required{
     color: var(--purple);
 }
-
+#nums label{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+fieldset {
+    margin-bottom: 25px;
+}
 legend{
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 11px;
     color: var(--darkGray);
     font-weight: 600;
-}
-fieldset {
-    margin-bottom: 25px;
-}
-
-#nums label{
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 input[type="radio"] {
@@ -409,18 +401,6 @@ input[type="radio"] {
 select{
 color: var(--darkGray);
 font-size: 20px;
-}
-
-input[type="submit"]{
-    padding: 10px;
-    background-color: var(--purple);
-    border: none;
-    color: #fff;
-    text-transform: uppercase;
-    margin-bottom: 21px;
-    font-size: 20px;
-    width: 100%;
-    height: 75px;
 }
 
 ::-webkit-input-placeholder { /* Edge */
@@ -440,6 +420,17 @@ input[type="submit"]{
     font-size: 20px;
     padding-left: 16px;
   }
+  input[type="submit"]{
+    padding: 10px;
+    background-color: var(--purple);
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 21px;
+    font-size: 20px;
+    width: 100%;
+    height: 75px;
+}
 
   /* select{
     appearance: none;
@@ -453,6 +444,11 @@ footer{
     padding-top: 19px;
     padding-bottom: 21px;
 }
+footer p{
+    padding: 0 0 29px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
 footer a{
     display: block;
     text-decoration: none;
@@ -461,29 +457,20 @@ footer a{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
-footer p{
-    padding: 0 0 29px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-}
+
 #privacy{
     margin-bottom: 20px;
 }
 
 /******************************************************/
- /**************** XSMALL MEDIA QUERIES ****************/
- /******************************************************/
+/**************** XSMALL MEDIA QUERIES ****************/
+/******************************************************/
 
- /* @media (min-width: 320px){
-   
-    #contentWrapper{
-        width: 320px;
-    }} */
- /****************** #contact section ******************/
 
- /******************************************************/
- /**************** TABLET MEDIA QUERIES ****************/
- /******************************************************/
+
+/******************************************************/
+/**************** TABLET MEDIA QUERIES ****************/
+/******************************************************/
 
 @media screen and (min-width: 628px) {
     #contentWrapper{
@@ -496,16 +483,16 @@ footer p{
         grid-template-columns: 1fr 3fr;
         grid-template-rows: repeat(2, 1fr);
     }
-    h1{
-        margin: 56px 0 0 0;
-        padding: 0;
-        grid-column: 2/-1;
-        grid-row: 1/2;
-    }
     header img{
         height: 103px;
         margin-top: 50px;
         grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    h1{
+        margin: 56px 0 0 0;
+        padding: 0;
+        grid-column: 2/-1;
         grid-row: 1/2;
     }
     header p{
@@ -587,9 +574,6 @@ footer p{
         margin: 0 0 15px 80px;
         padding: 29px 0 0;
     }
-    #plan h4{
-        font-size: 22px;
-    }
     #plan div{
        width: 607px;
        grid-template-columns: repeat(2, 1fr);
@@ -598,12 +582,13 @@ footer p{
        align-items: center;
        justify-items: center;
        margin: 0 auto;
-       
-
     }
     #plan section{
        width: 295px;
        height: 249px;
+    }
+    #plan h4{
+        font-size: 22px;
     }
    
     /****************** #testimonials section ******************/
@@ -650,32 +635,33 @@ footer p{
    input[type="submit"]{
     width: 296px;
     margin-left: 312px;
-   }
-   /****************** FOOTER ******************/
-   footer{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 75px;
-   }
-   footer p{
-    margin: 0 0 0 43px;
-    padding: 0;
-   }
-   footer a{
-    margin: 0;
-    padding: 0;
-   }
-   footer a:last-child{
-    margin-right:43px ;
+    }
+    /****************** FOOTER ******************/
+    footer{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 75px;
+    }
+    footer p{
+        margin: 0 0 0 43px;
+        padding: 0;
+    }
+    footer a{
+        margin: 0;
+        padding: 0;
+    }
+    footer a:last-child{
+        margin-right:43px ;
 
-   }
-   #privacy{
-   margin: 0;
-}
-/******************************************************/
-/**************** DESKTOP MEDIA QUERIES ***************/
-/******************************************************/
+    }
+    #privacy{
+    margin: 0;
+        }
+    }
+    /******************************************************/
+    /**************** DESKTOP MEDIA QUERIES ***************/
+    /******************************************************/
    
  @media screen and (min-width: 1281px) {
     #contentWrapper{
@@ -685,7 +671,6 @@ footer p{
     header{
         height: 228px;
         grid-template-columns: 2fr 1fr;
-        /* grid-template-rows: 228px; */
     }
     #logo{
         grid-column: 1/2;
@@ -699,7 +684,6 @@ footer p{
         height: 156px;
         margin-top: 24px;
         margin-left: -45px;
-
     }
     h1{
         grid-column: 1/2;
@@ -714,21 +698,20 @@ footer p{
         margin-left: 279px;
         margin-top: 140px;
         font-size: 25px;
-       
     }
     /************************ NAV **********************/
     nav{
         grid-column: 2/-1;
         grid-row: 1/-1; 
     }
+    #myLinks{
+        margin-right: 0;
+        width:650px; 
+        }
     nav li{
         margin: 0;
     }
-    #myLinks{
-    margin-right: 0;
-    width:650px; 
-    }
-
+   
     /*********************** MAIN **********************/
     #intro{
         display: grid;
@@ -742,14 +725,6 @@ footer p{
         margin: 128px 0 15px 141px;
         width: auto;
     }
-    #img-grid{
-        grid-column: 2/-1;
-        grid-row: 1/-1;
-        margin-right: 140px;
-        grid-template-rows: 1fr 300px;
-        padding-top: 119px;
-        margin-bottom: 119px;
-    }
     #intro p{
         grid-column: 1/2;
         max-width: 50ch;
@@ -759,8 +734,13 @@ footer p{
         grid-row: 1/-1;
         font-size: 20px;
     }
-    #about div{
-        width: 1000px;
+    #img-grid{
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+        margin-right: 140px;
+        grid-template-rows: 1fr 300px;
+        padding-top: 119px;
+        margin-bottom: 119px;
     }
     picture img{
         height: 300px;
@@ -771,43 +751,41 @@ footer p{
         padding-bottom: 122px;
         margin-top: 0;
     }
+    #plan h3{
+        margin:0;
+        padding: 124px 0 30px 140px;
+    }
     #plan div{
         width: 1640px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         margin: 0 auto;
-       
-    }
-    #plan h3{
-        margin:0;
-        padding: 124px 0 30px 140px;
-    }
-    #plan h4{
-        font-size: 30px;
     }
     #plan section{
        width: 398px;
        height: 336px;
     }
-  
-    /****************** #testimonials section ******************/
-    #testimonials div{
-        grid-template-columns: repeat(4, 1fr);
+    #plan h4{
+        font-size: 30px;
     }
+    /****************** #testimonials section ******************/
     #testimonials h3{
         margin-left:140px ;
     }
-
+    #testimonials div{
+        grid-template-columns: repeat(4, 1fr);
+    }
+   
     /****************** #about section ******************/
     #about{
         padding-bottom: 0;
     }
+    #about h3{
+        margin: 127px 0 18px 140px;
+    }
     #about div{
         width: 1056px;
         padding-bottom:122px ;
-    }
-    #about h3{
-        margin: 127px 0 18px 140px;
     }
     #about p{
         margin-bottom:0;
@@ -824,20 +802,19 @@ footer p{
     fieldset{
         margin-bottom: 0;
     }
-    
-    #nums label{
-        margin-bottom: 25px;
-    }
     legend{
         margin-bottom: 10px;
     }
-    input[type="submit"]{
-        margin-top:40px;
+    #nums label{
+        margin-bottom: 25px;
     }
     #destination{
         margin-bottom: 32px;
     }
-       
+    input[type="submit"]{
+        margin-top:40px;
+    }
+   
     /****************** FOOTER ******************/
     footer{
         height: 75px;
@@ -846,6 +823,5 @@ footer p{
         margin-left: 140px;
         margin-right: 927px;
     }
-    }
-
 }
+
