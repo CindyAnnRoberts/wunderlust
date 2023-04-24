@@ -595,11 +595,15 @@ footer p{
        grid-template-columns: repeat(2, 1fr);
        grid-template-rows: repeat(2, 1fr);
        gap: 16px;
+       align-items: center;
+       justify-items: center;
        margin: 0 auto;
+       
+
     }
     #plan section{
-        width: 295px;
-        height: 249px;
+       width: 295px;
+       height: 249px;
     }
    
     /****************** #testimonials section ******************/
@@ -771,6 +775,8 @@ footer p{
         width: 1640px;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
+        margin: 0 auto;
+       
     }
     #plan h3{
         margin:0;
