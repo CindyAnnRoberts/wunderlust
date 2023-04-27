@@ -243,8 +243,12 @@ padding: 30px 0 19px 43px;
 }
 #plan section{
     border: 3px solid #fff;
+    /* height: 302px;
+    width: 358px; */
+    width: 82%;
     height: 302px;
-    width: 358px;
+   
+    
     background-color: var(--teal);
     border-radius: 10px;
     text-align: center;
@@ -259,9 +263,15 @@ padding: 30px 0 19px 43px;
 }
 
 #plan img{
-   width: 180px;
-   height: 180px;
+    max-height: 60%;
+    max-width: 60%;
 }
+
+[title~="hotels"]{
+    display: block;
+    margin-top: 38.1px;
+}
+
 
 
 /****************** #testimonials section ******************/
@@ -341,8 +351,9 @@ content: close-quote;
 }
 /****************** #contact section ******************/
 #contact{
-    width: 357px;
+    /* width: 357px; */
     margin: 0 auto;
+    padding: 0 40px;
 }
 #contact h3{
     font-size: 40px;
@@ -360,9 +371,9 @@ content: close-quote;
     margin-bottom: 5px;
     font-weight: 600;
 }
-#names, #nums{
+/* #names, #nums{
     width: 351px;
-}
+} */
 
 #fName, #lName, #email, #phone, #travelTime, #destination{
     width: 100%;
@@ -463,9 +474,13 @@ footer a{
 }
 
 /******************************************************/
-/**************** XSMALL MEDIA QUERIES ****************/
+/**************** DARK COLOR SCHEME ****************/
 /******************************************************/
-
+@media (prefers-color-scheme:dark){
+    body{
+        background-color: var(--dark-gray); 
+    }
+}
 
 
 /******************************************************/
@@ -671,6 +686,8 @@ footer a{
     header{
         height: 228px;
         grid-template-columns: 2fr 1fr;
+        padding-bottom: 0;
+        padding: 2px;
     }
     #logo{
         grid-column: 1/2;
@@ -687,17 +704,16 @@ footer a{
     }
     h1{
         grid-column: 1/2;
-        grid-row: 1/-1;
         margin-left: 279px;
         margin-top: 65px;
     }
     header p{
         max-width: 100ch;
         grid-column: 1/2;
-        grid-row: 1/-1;
         margin-left: 279px;
-        margin-top: 140px;
+        margin-top: 150px;
         font-size: 25px;
+        padding: 0;
     }
     /************************ NAV **********************/
     nav{
@@ -715,7 +731,7 @@ footer a{
     /*********************** MAIN **********************/
     #intro{
         display: grid;
-        grid-template-columns: 1fr 950px;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 33px;
     }
@@ -727,20 +743,21 @@ footer a{
     }
     #intro p{
         grid-column: 1/2;
-        max-width: 50ch;
+        max-width: 49.6ch;
         margin-left: 139px;
         margin-top: 188px;
         height: 200px;
-        grid-row: 1/-1;
+        grid-row: 1/2;
         font-size: 20px;
     }
     #img-grid{
         grid-column: 2/-1;
         grid-row: 1/-1;
-        margin-right: 140px;
+        width: 950px;
         grid-template-rows: 1fr 300px;
-        padding-top: 119px;
-        margin-bottom: 119px;
+        margin-right: 140px;
+        padding-bottom: 114px;
+        padding-top: 122px;
     }
     picture img{
         height: 300px;
@@ -760,6 +777,7 @@ footer a{
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
         margin: 0 auto;
+        gap: 8px;
     }
     #plan section{
        width: 398px;
@@ -767,6 +785,10 @@ footer a{
     }
     #plan h4{
         font-size: 30px;
+    }
+    [title~="hotels"]{
+        display: block;
+        margin-top: 41px;
     }
     /****************** #testimonials section ******************/
     #testimonials h3{
