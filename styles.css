@@ -243,8 +243,6 @@ padding: 30px 0 19px 43px;
 }
 #plan section{
     border: 3px solid #fff;
-    /* height: 302px;
-    width: 358px; */
     width: 82%;
     height: 302px;
    
@@ -351,7 +349,6 @@ content: close-quote;
 }
 /****************** #contact section ******************/
 #contact{
-    /* width: 357px; */
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -371,9 +368,6 @@ content: close-quote;
     margin-bottom: 5px;
     font-weight: 600;
 }
-/* #names, #nums{
-    width: 351px;
-} */
 
 #fName, #lName, #email, #phone, #travelTime, #destination{
     width: 100%;
@@ -408,10 +402,12 @@ input[type="radio"] {
     accent-color: var(--purple);
     margin-right: 10px;
 }
-
 select{
 color: var(--darkGray);
 font-size: 20px;
+height: 75px;
+line-height: 75px;
+
 }
 
 ::-webkit-input-placeholder { /* Edge */
@@ -443,10 +439,30 @@ font-size: 20px;
     height: 75px;
 }
 
-  /* select{
+ select{
     appearance: none;
     outline: none;
-  } */
+    /* padding-right: 20px; */
+  }
+  .focus{
+    position: relative;
+  }
+ 
+ .focus::before{
+    border-style: solid;
+	border-width: 0.20em 0.20em 0 0;
+    border-color: var(--purple);
+	content: '';
+	display: inline-block;
+	height: 1.5em;
+    width: 1.5em;
+	left: -4em;
+	position: absolute;
+	top: -.75em;
+	transform: rotate(135deg);
+	vertical-align: top;
+    border-top-right-radius: 5%;
+ }
 
 /****************** FOOTER ******************/
 footer{
@@ -791,19 +807,27 @@ footer a{
         margin-top: 41px;
     }
     /****************** #testimonials section ******************/
+    #testimonials{
+        padding: 127px 0 125px;
+    }
     #testimonials h3{
         margin-left:140px ;
     }
     #testimonials div{
         grid-template-columns: repeat(4, 1fr);
     }
+    q{
+        max-width: 30ch;
+    }
    
     /****************** #about section ******************/
     #about{
         padding-bottom: 0;
+        padding-top: 0;
     }
     #about h3{
-        margin: 127px 0 18px 140px;
+        margin: 0 0 18px 140px;
+        padding-top: 124px;
     }
     #about div{
         width: 1056px;
@@ -811,6 +835,9 @@ footer a{
     }
     #about p{
         margin-bottom:0;
+    }
+    #about section img{
+        height: 150px;
     }
     /****************** #contact section ******************/
     #contact{
